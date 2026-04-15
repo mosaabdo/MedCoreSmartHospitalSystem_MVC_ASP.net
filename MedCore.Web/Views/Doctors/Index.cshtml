@@ -1,0 +1,103 @@
+﻿@model IEnumerable<MedCore.Domain.Entities.Doctor>
+
+@{
+    ViewData["Title"] = "Doctors List";
+}
+
+<div class="container-fluid px-4">
+    <div class="d-flex justify-content-between align-items-center mt-4 mb-4">
+        <h3 class="fw-bold mb-0">Doctors Management</h3>
+        @if (User.IsInRole("Admin"))
+        {
+            <a asp-action="Create" class="btn btn-primary shadow-sm">
+                <i class="fas fa-plus me-1"></i> Add New Doctor
+            </a>
+        }
+    </div>
+
+    <div class="card shadow-sm border-0">
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="bg-light">
+                        <tr>
+                            <th class="ps-4">ID</th>
+                            <th>Doctor Name</th>
+                            <th>Phone Number</th>
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <th class="text-end pe-4">Actions</th>
+                            }
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model != null && Model.Any())
+                        {
+                            foreach (var doctor in Model)
+                            {
+                                <tr>
+                                    <td class="ps-4 text-muted fw-bold">#@doctor.Id</td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="bg-primary bg-opacity-10 rounded-circle p-2 me-3">
+                                                <i class="fas fa-user-md text-primary"></i>
+                                            </div>
+                                            <span class="fw-bold text-dark">@doctor.Name</span>
+                                        </div>
+                                    </td>
+                                    <td>@doctor.Phone</td>
+                                    @if (User.IsInRole("Admin"))
+                                    {
+                                        <td class="text-end pe-4">
+                                            <a asp-action="Edit" asp-route-id="@doctor.Id" class="btn btn-sm btn-outline-primary me-2" title="Edit">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <button type="button" onclick="confirmDelete(@doctor.Id, '@doctor.Name')" class="btn btn-sm btn-outline-danger" title="Delete">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </button>
+                                        </td>
+                                    }
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="4" class="text-center py-4 text-muted">
+                                    <i class="fas fa-folder-open fs-3 mb-2"></i>
+                                    <p class="mb-0">No doctors registered yet.</p>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form id="deleteForm" asp-action="Delete" method="post">
+    <input type="hidden" id="deleteId" name="id" />
+</form>
+
+@section Scripts {
+    <script>
+        function confirmDelete(id, name) {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You are about to delete Dr. " + name + "!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#dc3545',
+                cancelButtonColor: '#6c757d',
+                confirmButtonText: 'Yes, delete it!',
+                cancelButtonText: 'Cancel'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                     document.getElementById('deleteId').value = id;
+                    document.getElementById('deleteForm').submit();
+                }
+            })
+        }
+    </script>
+}

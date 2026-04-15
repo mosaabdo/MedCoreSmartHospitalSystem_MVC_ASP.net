@@ -1,0 +1,110 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\micro\\Desktop\\mvc and entity\\MedCoreSmartHospitalSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F4D7D027-C6BC-B622-992B-3E4EAFC52FBD}|MedCore.Web\\MedCore.Web.csproj|c:\\users\\micro\\desktop\\mvc and entity\\medcoresmarthospitalsystem\\medcore.web\\medcore.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F4D7D027-C6BC-B622-992B-3E4EAFC52FBD}|MedCore.Web\\MedCore.Web.csproj|solutionrelative:medcore.web\\medcore.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8DE6A57D-61DD-2516-4C15-3CB9D8BAEF46}|MedCoreLite.Domain\\MedCore.Domain.csproj|c:\\users\\micro\\desktop\\mvc and entity\\medcoresmarthospitalsystem\\medcorelite.domain\\entities\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DE6A57D-61DD-2516-4C15-3CB9D8BAEF46}|MedCoreLite.Domain\\MedCore.Domain.csproj|solutionrelative:medcorelite.domain\\entities\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4D7D027-C6BC-B622-992B-3E4EAFC52FBD}|MedCore.Web\\MedCore.Web.csproj|c:\\users\\micro\\desktop\\mvc and entity\\medcoresmarthospitalsystem\\medcore.web\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4D7D027-C6BC-B622-992B-3E4EAFC52FBD}|MedCore.Web\\MedCore.Web.csproj|solutionrelative:medcore.web\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8DE6A57D-61DD-2516-4C15-3CB9D8BAEF46}|MedCoreLite.Domain\\MedCore.Domain.csproj|c:\\users\\micro\\desktop\\mvc and entity\\medcoresmarthospitalsystem\\medcorelite.domain\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DE6A57D-61DD-2516-4C15-3CB9D8BAEF46}|MedCoreLite.Domain\\MedCore.Domain.csproj|solutionrelative:medcorelite.domain\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4D7D027-C6BC-B622-992B-3E4EAFC52FBD}|MedCore.Web\\MedCore.Web.csproj|c:\\users\\micro\\desktop\\mvc and entity\\medcoresmarthospitalsystem\\medcore.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4D7D027-C6BC-B622-992B-3E4EAFC52FBD}|MedCore.Web\\MedCore.Web.csproj|solutionrelative:medcore.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MedCore.Web",
+              "DocumentMoniker": "C:\\Users\\micro\\Desktop\\mvc and entity\\MedCoreSmartHospitalSystem\\MedCore.Web\\MedCore.Web.csproj",
+              "RelativeDocumentMoniker": "MedCore.Web\\MedCore.Web.csproj",
+              "ToolTip": "C:\\Users\\micro\\Desktop\\mvc and entity\\MedCoreSmartHospitalSystem\\MedCore.Web\\MedCore.Web.csproj",
+              "RelativeToolTip": "MedCore.Web\\MedCore.Web.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-15T20:01:35.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Patient.cs",
+              "DocumentMoniker": "C:\\Users\\micro\\Desktop\\mvc and entity\\MedCoreSmartHospitalSystem\\MedCoreLite.Domain\\Entities\\Patient.cs",
+              "RelativeDocumentMoniker": "MedCoreLite.Domain\\Entities\\Patient.cs",
+              "ToolTip": "C:\\Users\\micro\\Desktop\\mvc and entity\\MedCoreSmartHospitalSystem\\MedCoreLite.Domain\\Entities\\Patient.cs",
+              "RelativeToolTip": "MedCoreLite.Domain\\Entities\\Patient.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAwwAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T18:31:02.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\micro\\Desktop\\mvc and entity\\MedCoreSmartHospitalSystem\\MedCore.Web\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "MedCore.Web\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\micro\\Desktop\\mvc and entity\\MedCoreSmartHospitalSystem\\MedCore.Web\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "MedCore.Web\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAADwvzQAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T18:25:54.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\micro\\Desktop\\mvc and entity\\MedCoreSmartHospitalSystem\\MedCoreLite.Domain\\Entities\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "MedCoreLite.Domain\\Entities\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\micro\\Desktop\\mvc and entity\\MedCoreSmartHospitalSystem\\MedCoreLite.Domain\\Entities\\BaseEntity.cs",
+              "RelativeToolTip": "MedCoreLite.Domain\\Entities\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T18:23:39.771Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\micro\\Desktop\\mvc and entity\\MedCoreSmartHospitalSystem\\MedCore.Web\\Program.cs",
+              "RelativeDocumentMoniker": "MedCore.Web\\Program.cs",
+              "ToolTip": "C:\\Users\\micro\\Desktop\\mvc and entity\\MedCoreSmartHospitalSystem\\MedCore.Web\\Program.cs",
+              "RelativeToolTip": "MedCore.Web\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T11:09:24.747Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCoreLite.Domain\bin\Debug\net10.0\MedCore.Domain.deps.json
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCoreLite.Domain\bin\Debug\net10.0\MedCore.Domain.dll
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCoreLite.Domain\bin\Debug\net10.0\MedCore.Domain.pdb
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCoreLite.Domain\obj\Debug\net10.0\MedCore.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCoreLite.Domain\obj\Debug\net10.0\MedCore.Domain.AssemblyInfoInputs.cache
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCoreLite.Domain\obj\Debug\net10.0\MedCore.Domain.AssemblyInfo.cs
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCoreLite.Domain\obj\Debug\net10.0\MedCore.Domain.csproj.CoreCompileInputs.cache
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCoreLite.Domain\obj\Debug\net10.0\MedCore.Domain.dll
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCoreLite.Domain\obj\Debug\net10.0\refint\MedCore.Domain.dll
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCoreLite.Domain\obj\Debug\net10.0\MedCore.Domain.pdb
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCoreLite.Domain\obj\Debug\net10.0\ref\MedCore.Domain.dll

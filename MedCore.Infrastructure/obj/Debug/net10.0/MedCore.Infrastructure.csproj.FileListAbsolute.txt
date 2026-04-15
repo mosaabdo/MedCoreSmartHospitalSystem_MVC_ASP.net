@@ -1,0 +1,17 @@
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Infrastructure\bin\Debug\net10.0\MedCore.Infrastructure.deps.json
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Infrastructure\bin\Debug\net10.0\MedCore.Infrastructure.runtimeconfig.json
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Infrastructure\bin\Debug\net10.0\MedCore.Infrastructure.dll
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Infrastructure\bin\Debug\net10.0\MedCore.Infrastructure.pdb
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Infrastructure\bin\Debug\net10.0\MedCore.Domain.dll
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Infrastructure\bin\Debug\net10.0\MedCore.Domain.pdb
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Infrastructure\obj\Debug\net10.0\MedCore.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Infrastructure\obj\Debug\net10.0\MedCore.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Infrastructure\obj\Debug\net10.0\MedCore.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Infrastructure\obj\Debug\net10.0\MedCore.Infrastructure.AssemblyInfo.cs
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Infrastructure\obj\Debug\net10.0\MedCore.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Infrastructure\obj\Debug\net10.0\MedCore..09D26AFD.Up2Date
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Infrastructure\obj\Debug\net10.0\MedCore.Infrastructure.dll
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Infrastructure\obj\Debug\net10.0\refint\MedCore.Infrastructure.dll
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Infrastructure\obj\Debug\net10.0\MedCore.Infrastructure.pdb
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Infrastructure\obj\Debug\net10.0\MedCore.Infrastructure.genruntimeconfig.cache
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Infrastructure\obj\Debug\net10.0\ref\MedCore.Infrastructure.dll

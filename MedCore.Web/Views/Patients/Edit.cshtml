@@ -1,0 +1,49 @@
+﻿@model MedCore.Web.ViewModels.PatientEditViewModel
+
+@{
+    ViewData["Title"] = "Edit Patient";
+}
+
+<div class="container-fluid px-4">
+    <h3 class="mt-4">Edit Patient Profile</h3>
+
+    <div class="card mb-4 shadow-sm border-0 col-lg-8">
+        <div class="card-body p-4">
+            <form asp-action="Edit" method="post">
+                <input type="hidden" asp-for="Id" />
+                <div asp-validation-summary="ModelOnly" class="text-danger small mb-3"></div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Name" class="form-label text-muted small fw-bold"></label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="fas fa-user text-muted"></i></span>
+                            <input asp-for="Name" class="form-control" />
+                        </div>
+                        <span asp-validation-for="Name" class="text-danger x-small"></span>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Phone" class="form-label text-muted small fw-bold"></label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="fas fa-phone text-muted"></i></span>
+                            <input asp-for="Phone" class="form-control" />
+                        </div>
+                        <span asp-validation-for="Phone" class="text-danger x-small"></span>
+                    </div>
+                </div>
+
+                <div class="mt-4 border-top pt-3">
+                    <button type="submit" class="btn btn-primary px-4 shadow-sm">Save Changes</button>
+                    <a asp-action="Index" class="btn btn-light ms-2">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,268 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MedCore</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f6f9;
+            overflow-x: hidden;
+        }
+
+        .sidebar {
+            background-color: #1e1e2d;
+            min-height: 100vh;
+            width: 270px;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .sidebar-brand {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            padding: 0 25px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .sidebar-menu {
+            padding: 20px 15px;
+        }
+
+        .menu-title {
+            color: #6c7293;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin: 15px 0 5px 15px;
+            text-transform: uppercase;
+        }
+
+        .sidebar-link {
+            color: #a2a3b7;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            margin-bottom: 4px;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+            .sidebar-link i {
+                font-size: 1.05rem;
+                width: 30px;
+                text-align: center;
+            }
+
+            .sidebar-link:hover {
+                color: #ffffff;
+                background-color: rgba(255,255,255,0.05);
+            }
+
+            .sidebar-link.active {
+                background-color: #0d6efd;
+                color: #ffffff;
+                box-shadow: 0 4px 10px rgba(13,110,253,0.3);
+            }
+
+        .main-wrapper {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .top-navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            height: 70px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.04);
+            z-index: 999;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 4px;
+        }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: #a8a8a8;
+            }
+    </style>
+</head>
+<body>
+    <div class="d-flex">
+
+        <aside class="sidebar flex-shrink-0">
+            <div class="sidebar-brand">
+                <i class="fas fa-hospital-symbol text-primary fs-3 me-3"></i>
+                <h4 class="text-white fw-bold mb-0">MedCore<span class="text-primary">.</span></h4>
+            </div>
+
+            <div class="sidebar-menu">
+                <a href="/Home/Index" class="sidebar-link">
+                    <i class="fas fa-border-all"></i> Dashboard Overview
+                </a>
+
+                <div class="menu-title mt-4">Medical Directory</div>
+                <a href="/Specialties/Index" class="sidebar-link">
+                    <i class="fas fa-list-ul"></i> All Specialties
+                </a>
+                <a href="/Doctors/Index" class="sidebar-link">
+                    <i class="fas fa-user-md"></i> All Doctors
+                </a>
+
+                @if (User.IsInRole("Admin"))
+                {
+                    <div class="menu-title mt-4">Clinic Management</div>
+                    <a href="/Specialties/Create" class="sidebar-link">
+                        <i class="fas fa-plus-circle text-success"></i> Add Specialty
+                    </a>
+                    <a href="/Doctors/Create" class="sidebar-link">
+                        <i class="fas fa-user-plus text-success"></i> Add Doctor
+                    </a>
+                }
+
+                @if (User.IsInRole("Admin") || User.IsInRole("Receptionist"))
+                {
+                    <div class="menu-title mt-4">Patients</div>
+                    <a href="/Patients/Index" class="sidebar-link">
+                        <i class="fas fa-user-injured"></i> All Patients
+                    </a>
+                    <a href="/Patients/Create" class="sidebar-link">
+                        <i class="fas fa-user-plus text-success"></i> Add Patient
+                    </a>
+
+                    <div class="menu-title mt-4">Appointments</div>
+                    <a href="/Appointments/Index" class="sidebar-link">
+                        <i class="fas fa-calendar-alt"></i> All Appointments
+                    </a>
+                    <a href="/Appointments/Book" class="sidebar-link">
+                        <i class="fas fa-calendar-plus text-success"></i> Book Appointment
+                    </a>
+                }
+            </div>
+        </aside>
+
+        <main class="main-wrapper">
+
+            <nav class="top-navbar d-flex align-items-center justify-content-between px-4 sticky-top">
+                <div class="d-flex align-items-center">
+                    <h5 class="mb-0 fw-bold text-dark d-none d-md-block">@ViewData["Title"]</h5>
+                </div>
+
+                <div class="d-flex align-items-center gap-3">
+                    <div class="text-muted small fw-medium d-none d-lg-block border-end pe-3">
+                        <i class="fas fa-calendar-alt me-1 text-primary"></i> @DateTime.Now.ToString("dddd, dd MMM yyyy")
+                    </div>
+
+                    <button class="btn btn-light rounded-circle position-relative p-2 border-0 bg-transparent">
+                        <i class="fas fa-bell fs-5 text-secondary"></i>
+                    </button>
+
+                    <div class="dropdown">
+                        <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle text-dark" id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
+                            @{
+                                var userName = User.Identity?.Name?.Split('@')[0] ?? "User";
+                                var roleName = User.IsInRole("Admin") ? "Administrator" :
+                                (User.IsInRole("Receptionist") ? "Reception Desk" : "Patient / User");
+                            }
+                            <img src="https://ui-avatars.com/api/?name=@userName&background=0d6efd&color=fff&bold=true" alt="User" width="38" height="38" class="rounded-circle shadow-sm">
+                            <div class="ms-2 d-none d-sm-block">
+                                <div class="fw-bold fs-6 lh-1 text-capitalize">@userName</div>
+                                <small class="text-muted" style="font-size: 0.75rem;">@roleName</small>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2" aria-labelledby="dropdownUser">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2 text-muted"></i> Profile</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <form asp-controller="Account" asp-action="Logout" method="post" class="m-0">
+                                    <button type="submit" class="dropdown-item text-danger border-0 bg-transparent w-100 text-start">
+                                        <i class="fas fa-sign-out-alt me-2"></i> Sign out
+                                    </button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="p-4 flex-grow-1">
+                @RenderBody()
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // 1. Sidebar Active Link (Smart logic to highlight the correct sub-menu)
+            var currentPath = window.location.pathname.toLowerCase();
+            $('.sidebar-link').each(function () {
+                var linkPath = $(this).attr('href').toLowerCase();
+                if (currentPath === linkPath || (currentPath === '/' && linkPath === '/home/index')) {
+                    $(this).addClass('active');
+                }
+            });
+
+            // 2. SweetAlert Notifications
+            var successMessage = '@TempData["SuccessMessage"]';
+            if (successMessage && successMessage.trim() !== '') {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: successMessage,
+                    timer: 3000,
+                    showConfirmButton: false
+                });
+            }
+
+            var errorMessage = '@TempData["ErrorMessage"]';
+            if (errorMessage && errorMessage.trim() !== '') {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Action Denied!',
+                    text: errorMessage,
+                    confirmButtonColor: '#d33'
+                });
+            }
+        });
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

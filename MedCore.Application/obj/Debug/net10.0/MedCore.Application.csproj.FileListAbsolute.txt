@@ -1,0 +1,15 @@
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Application\bin\Debug\net10.0\MedCore.Application.deps.json
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Application\bin\Debug\net10.0\MedCore.Application.dll
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Application\bin\Debug\net10.0\MedCore.Application.pdb
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Application\bin\Debug\net10.0\MedCore.Domain.dll
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Application\bin\Debug\net10.0\MedCore.Domain.pdb
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Application\obj\Debug\net10.0\MedCore.Application.csproj.AssemblyReference.cache
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Application\obj\Debug\net10.0\MedCore.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Application\obj\Debug\net10.0\MedCore.Application.AssemblyInfoInputs.cache
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Application\obj\Debug\net10.0\MedCore.Application.AssemblyInfo.cs
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Application\obj\Debug\net10.0\MedCore.Application.csproj.CoreCompileInputs.cache
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Application\obj\Debug\net10.0\MedCore..255576BD.Up2Date
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Application\obj\Debug\net10.0\MedCore.Application.dll
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Application\obj\Debug\net10.0\refint\MedCore.Application.dll
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Application\obj\Debug\net10.0\MedCore.Application.pdb
+C:\Users\micro\Desktop\mvc and entity\MedCoreSmartHospitalSystem\MedCore.Application\obj\Debug\net10.0\ref\MedCore.Application.dll

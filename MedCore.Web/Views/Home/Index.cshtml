@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Dashboard Overview";
+}
+
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h3 class="fw-bold">Welcome back, Admin!</h3>
+            <p class="text-muted">Here is what's happening in your hospital today.</p>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm p-3" style="border-left: 5px solid #4e73df !important;">
+                <div class="d-flex align-items-center">
+                    <div class="bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                        <i class="fas fa-user-md text-primary fs-4"></i>
+                    </div>
+                    <div>
+                        <h6 class="text-muted mb-1 text-uppercase small fw-bold">Total Doctors</h6>
+                        <h2 class="mb-0 fw-bold">@ViewBag.DoctorsCount</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm p-3" style="border-left: 5px solid #1cc88a !important;">
+                <div class="d-flex align-items-center">
+                    <div class="bg-success bg-opacity-10 p-3 rounded-circle me-3">
+                        <i class="fas fa-user-injured text-success fs-4"></i>
+                    </div>
+                    <div>
+                        <h6 class="text-muted mb-1 text-uppercase small fw-bold">Total Patients</h6>
+                        <h2 class="mb-0 fw-bold">@ViewBag.PatientsCount</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm p-3" style="border-left: 5px solid #f6c23e !important;">
+                <div class="d-flex align-items-center">
+                    <div class="bg-warning bg-opacity-10 p-3 rounded-circle me-3">
+                        <i class="fas fa-calendar-check text-warning fs-4"></i>
+                    </div>
+                    <div>
+                        <h6 class="text-muted mb-1 text-uppercase small fw-bold">Total Appointments</h6>
+                        <h2 class="mb-0 fw-bold">@ViewBag.AppointmentsCount</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

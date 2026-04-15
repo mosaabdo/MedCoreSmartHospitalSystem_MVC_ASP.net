@@ -1,0 +1,109 @@
+﻿@model IEnumerable<MedCore.Domain.Entities.Appointment>
+
+@{
+    ViewData["Title"] = "Appointments List";
+}
+
+<div class="container-fluid px-4">
+    <div class="d-flex justify-content-between align-items-center mt-4 mb-4">
+        <h3 class="fw-bold mb-0">Appointments Management</h3>
+        <a asp-action="Book" class="btn btn-primary shadow-sm">
+            <i class="fas fa-plus me-2"></i> New Appointment
+        </a>
+    </div>
+
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-white py-3 border-bottom-0 pt-4">
+            <i class="fas fa-calendar-alt me-2 text-primary"></i>
+            <strong class="text-muted small text-uppercase">Recent & Upcoming Appointments</strong>
+        </div>
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="bg-light">
+                        <tr>
+                            <th class="ps-4">Date & Time</th>
+                            <th>Patient Name</th>
+                            <th>Doctor</th>
+                            <th>Notes</th>
+                            <th class="text-end pe-4">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model != null && Model.Any())
+                        {
+                            foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td class="ps-4 fw-bold text-primary">
+                                        <i class="far fa-clock me-2 text-muted"></i>
+                                        @item.AppointmentDate.ToString("MMM dd, yyyy - hh:mm tt")
+                                    </td>
+                                    <td class="fw-bold text-dark">
+                                        @item.Patient?.Name
+                                    </td>
+                                    <td>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2">
+                                            <i class="fas fa-user-md me-1"></i> Dr. @item.Doctor?.Name
+                                        </span>
+                                    </td>
+                                    <td class="text-muted small">
+                                        @(string.IsNullOrWhiteSpace(item.Notes) ? "---" : item.Notes)
+                                    </td>
+                                   
+                                    <td class="text-end pe-4">
+                                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-outline-info me-1" title="View Details">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary me-1" title="Edit Appointment">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <button type="button" onclick="confirmCancel(@item.Id, '@item.Patient?.Name')" class="btn btn-sm btn-outline-danger" title="Cancel Appointment">
+                                            <i class="fas fa-times-circle"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="5" class="text-center py-5 text-muted">
+                                    <i class="fas fa-calendar-times fs-1 mb-3 text-black-50"></i>
+                                    <h5 class="fw-bold">No appointments found</h5>
+                                    <p class="mb-0">There are currently no appointments scheduled in the system.</p>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form id="cancelForm" asp-action="Delete" method="post">
+    <input type="hidden" id="cancelId" name="id" />
+</form>
+
+@section Scripts {
+    <script>
+        function confirmCancel(id, patientName) {
+            Swal.fire({
+                title: 'Cancel Appointment?',
+                text: "Are you sure you want to cancel the appointment for " + patientName + "?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#dc3545',
+                cancelButtonColor: '#6c757d',
+                confirmButtonText: 'Yes, cancel it!',
+                cancelButtonText: 'Keep it'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    document.getElementById('cancelId').value = id;
+                    document.getElementById('cancelForm').submit();
+                }
+            })
+        }
+    </script>
+}
