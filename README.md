@@ -67,30 +67,22 @@ On the first run, the system automatically seeds the required roles and default 
 
 | Role | Email | Password |
 | :--- | :--- | :--- |
-| **Admin** | `admin@medcore.com` | `123456` |
-| **Receptionist** | `reception@medcore.com` | `123456` |
+| **Admin** | `admin@admin.com` | `123456789` |
+| **Receptionist** | `mousaabdelbasset@gmail` | `123456789` |
+| **User** | `kareem@gmail` | `123456789` |
+
 
 > **Note:** It is highly recommended to change these default passwords before deploying to a production environment.
 
 ---
 
-## 📸 Screenshots
-
-*(Add your project screenshots here to showcase the UI)*
-
-![Dashboard](link-to-your-screenshot)
-![Appointment List](link-to-your-screenshot)
-![Booking System](link-to-your-screenshot)
-
----
 
 ## 🤝 Contact & Support
 
-This system was designed and developed by **Eng. [Write Your Name Here]**. For inquiries or collaboration requests, please feel free to reach out:
+This system was designed and developed by **Eng. [Mousa Abdelbasset]**. For inquiries or collaboration requests, please feel free to reach out:
 
-* **Email:** [Your Email Address]
-* **LinkedIn:** [Your LinkedIn Profile Link]
-* **GitHub:** [Your GitHub Profile Link]
+* **Email:** [mousaabdelbasset@gmail.com]
+* **LinkedIn:** [https://www.linkedin.com/in/mosaabd0/]
 
 ---
 **Developed with ❤️ using Onion Architecture.**
